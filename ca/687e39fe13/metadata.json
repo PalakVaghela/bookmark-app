@@ -1,0 +1,18 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "ca687e39fe13",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "README.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/ca/687e39fe13/0/metadata.json",
+      "transcript": "/ca/687e39fe13/0/full.jsonl",
+      "content_hash": "/ca/687e39fe13/0/content_hash.txt",
+      "prompt": "/ca/687e39fe13/0/prompt.txt"
+    }
+  ]
+}

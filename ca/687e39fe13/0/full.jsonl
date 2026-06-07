@@ -1,0 +1,5 @@
+{"role":"user","message":{"content":[{"type":"text","text":"<user_query>\nadd a test message in @README.md \n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Reading README.md and adding a test message.\n\n[REDACTED]"},{"type":"tool_use","name":"Read","input":{"path":"/home/odoo/Videos/Projects/bookmark-app/README.md"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"[REDACTED]"},{"type":"tool_use","name":"StrReplace","input":{"path":"/home/odoo/Videos/Projects/bookmark-app/README.md","old_string":"# Bookmark-app starter\n","new_string":"# Bookmark-app starter\n\nThis is a test message.\n"}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"Added a test message to `README.md`:\n\n```markdown\n# Bookmark-app starter\n\nThis is a test message.\n```\n\n[REDACTED]"}]}}
+{"type":"turn_ended","status":"success"}
