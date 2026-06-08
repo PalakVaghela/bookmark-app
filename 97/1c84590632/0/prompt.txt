@@ -1,0 +1,83 @@
+generate the env in which i can put  keys and url for supabse project
+
+---
+
+generate the env in which i can put  keys and url for supabse project
+
+---
+
+i want to generat the functionality in login and sign up, i have already created privacy policy in supabse, i have table and all things, i want to make sure that user should be able to login and signup,
+(1) in signup page:
+there should be:
+email,
+password
+handle( ex: unique user name)
+
+(2) in login page:
+email,
+password.
+
+if it user sign up then in my supabase the 'user'  table the data should be stored. in which it have handle to store the handle of the user
+
+---
+
+i want to generat the functionality in login and sign up, i have already created privacy policy in supabse, i have table and all things, i want to make sure that user should be able to login and signup,
+(1) in signup page:
+there should be:
+email,
+password
+handle( ex: unique user name)
+
+(2) in login page:
+email,
+password.
+
+if it user sign up then in my supabase the 'user'  table the data should be stored. in which it have handle to store the handle of the user
+
+---
+
+craete a single component in login page. which have fields like user_id, password and handler fields. also craete a submit button. no other operation. just hooks to enter the data. and no redirects on submits.
+
+---
+
+craete a single component in login page. which have fields like user_id, password and handler fields. also craete a submit button. no other operation. just hooks to enter the data. and no redirects on submits.
+
+---
+
+craete a single component in login page. which have fields like user_id, password and handler fields. also craete a submit button. no other operation. just hooks to enter the data. and no redirects on submits. also don;t craete differnt css fiile. just use tailwind to craete just basic degns. no proper ui needed rn.
+
+---
+
+craete a single component in login page. which have fields like user_id, password and handler fields. also craete a submit button. no other operation. just hooks to enter the data. and no redirects on submits. also don;t craete differnt css fiile. just use tailwind to craete just basic degns. no proper ui needed rn.
+
+---
+
+For the code present, we get this error:
+```
+'FormEvent' is deprecated.
+```
+Fix it, verify, and then give a concise explanation. @app/(auth)/login/page.tsx:2-5 . can you just checl it?
+
+---
+
+For the code present, we get this error:
+```
+'FormEvent' is deprecated.
+```
+Fix it, verify, and then give a concise explanation. @app/(auth)/login/page.tsx:2-5 . can you just checl it?
+
+---
+
+indashboard craete a sinhle button,  in which there is one add button, on click of that button one box should be open like we do for todo. on click box should be in which just 3 fields:
+title,
+url,
+boolean - to allow user to select public or private. and one single craete button.
+don't need so much design just normal tailwind.
+
+---
+
+indashboard craete a sinhle button,  in which there is one add button, on click of that button one box should be open like we do for todo. on click box should be in which just 3 fields:
+title,
+url,
+boolean - to allow user to select public or private. and one single craete button.
+don't need so much design just normal tailwind.
