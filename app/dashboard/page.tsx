@@ -1,72 +1,23 @@
-"use client";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
+import DashboardClient from "./dashboard-client";
 
-import { useState, type SubmitEvent } from "react";
+export default async function DashboardPage() {
+  const supabase = await createClient();
 
-export default function Dashboard() {
-  const [showForm, setShowForm] = useState(false);
-  const [title, setTitle] = useState("");
-  const [url, setUrl] = useState("");
-  const [isPublic, setIsPublic] = useState(false);
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  function handleCreate(event: SubmitEvent<HTMLFormElement>) {
-    event.preventDefault();
+  if (!user) {
+    redirect("/login");
   }
 
-  return (
-    <div className="flex flex-1 flex-col p-6">
-      <h1 className="mb-4 text-xl font-medium">Dashboard</h1>
+  const { data: bookmarks } = await supabase
+    .from("bookmarks")
+    .select("id, title, url, is_public, created_at")
+    .eq("user_id", user.id)
+    .order("created_at", { ascending: false });
 
-      <button
-        type="button"
-        onClick={() => setShowForm((open) => !open)}
-        className="w-fit rounded bg-gray-900 px-4 py-2 text-sm text-white"
-      >
-        Add
-      </button>
-
-      {showForm ? (
-        <form
-          onSubmit={handleCreate}
-          className="mt-4 flex w-full max-w-md flex-col gap-4 rounded border border-gray-300 p-4"
-        >
-          <label className="flex flex-col gap-1 text-sm">
-            Title
-            <input
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              className="rounded border border-gray-300 px-3 py-2"
-            />
-          </label>
-
-          <label className="flex flex-col gap-1 text-sm">
-            URL
-            <input
-              type="url"
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-              className="rounded border border-gray-300 px-3 py-2"
-            />
-          </label>
-
-          <label className="flex items-center gap-2 text-sm">
-            <input
-              type="checkbox"
-              checked={isPublic}
-              onChange={(e) => setIsPublic(e.target.checked)}
-              className="h-4 w-4"
-            />
-            Public
-          </label>
-
-          <button
-            type="submit"
-            className="w-fit rounded bg-gray-900 px-4 py-2 text-sm text-white"
-          >
-            Create
-          </button>
-        </form>
-      ) : null}
-    </div>
-  );
+  return <DashboardClient bookmarks={bookmarks ?? []} />;
 }
