@@ -1,19 +1,17 @@
 "use client";
 
-import { useState, type SubmitEvent } from "react";
+import { useActionState } from "react";
+import { signIn, type AuthState } from "@/app/(auth)/actions";
+
+const initialState: AuthState = {};
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
-    event.preventDefault();
-  }
+  const [state, formAction, isPending] = useActionState(signIn, initialState);
 
   return (
     <div className="flex flex-1 items-center justify-center p-4">
       <form
-        onSubmit={handleSubmit}
+        action={formAction}
         className="flex w-full max-w-sm flex-col gap-4 rounded border border-gray-300 p-6"
       >
         <h1 className="text-xl font-medium">Login</h1>
@@ -21,9 +19,8 @@ export default function Login() {
         <label className="flex flex-col gap-1 text-sm">
           Email
           <input
+            name="email"
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
             className="rounded border border-gray-300 px-3 py-2"
           />
         </label>
@@ -31,18 +28,22 @@ export default function Login() {
         <label className="flex flex-col gap-1 text-sm">
           Password
           <input
+            name="password"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
             className="rounded border border-gray-300 px-3 py-2"
           />
         </label>
 
+        {state.error ? (
+          <p className="text-sm text-red-600">{state.error}</p>
+        ) : null}
+
         <button
           type="submit"
-          className="rounded bg-gray-900 px-4 py-2 text-sm text-white"
+          disabled={isPending}
+          className="rounded bg-gray-900 px-4 py-2 text-sm text-white disabled:opacity-60"
         >
-          Submit
+          {isPending ? "Signing in..." : "Submit"}
         </button>
       </form>
     </div>
