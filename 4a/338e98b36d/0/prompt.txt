@@ -1,0 +1,196 @@
+generate the env in which i can put  keys and url for supabse project
+
+---
+
+generate the env in which i can put  keys and url for supabse project
+
+---
+
+i want to generat the functionality in login and sign up, i have already created privacy policy in supabse, i have table and all things, i want to make sure that user should be able to login and signup,
+(1) in signup page:
+there should be:
+email,
+password
+handle( ex: unique user name)
+
+(2) in login page:
+email,
+password.
+
+if it user sign up then in my supabase the 'user'  table the data should be stored. in which it have handle to store the handle of the user
+
+---
+
+i want to generat the functionality in login and sign up, i have already created privacy policy in supabse, i have table and all things, i want to make sure that user should be able to login and signup,
+(1) in signup page:
+there should be:
+email,
+password
+handle( ex: unique user name)
+
+(2) in login page:
+email,
+password.
+
+if it user sign up then in my supabase the 'user'  table the data should be stored. in which it have handle to store the handle of the user
+
+---
+
+craete a single component in login page. which have fields like user_id, password and handler fields. also craete a submit button. no other operation. just hooks to enter the data. and no redirects on submits.
+
+---
+
+craete a single component in login page. which have fields like user_id, password and handler fields. also craete a submit button. no other operation. just hooks to enter the data. and no redirects on submits.
+
+---
+
+craete a single component in login page. which have fields like user_id, password and handler fields. also craete a submit button. no other operation. just hooks to enter the data. and no redirects on submits. also don;t craete differnt css fiile. just use tailwind to craete just basic degns. no proper ui needed rn.
+
+---
+
+craete a single component in login page. which have fields like user_id, password and handler fields. also craete a submit button. no other operation. just hooks to enter the data. and no redirects on submits. also don;t craete differnt css fiile. just use tailwind to craete just basic degns. no proper ui needed rn.
+
+---
+
+For the code present, we get this error:
+```
+'FormEvent' is deprecated.
+```
+Fix it, verify, and then give a concise explanation. @app/(auth)/login/page.tsx:2-5 . can you just checl it?
+
+---
+
+For the code present, we get this error:
+```
+'FormEvent' is deprecated.
+```
+Fix it, verify, and then give a concise explanation. @app/(auth)/login/page.tsx:2-5 . can you just checl it?
+
+---
+
+indashboard craete a sinhle button,  in which there is one add button, on click of that button one box should be open like we do for todo. on click box should be in which just 3 fields:
+title,
+url,
+boolean - to allow user to select public or private. and one single craete button.
+don't need so much design just normal tailwind.
+
+---
+
+indashboard craete a sinhle button,  in which there is one add button, on click of that button one box should be open like we do for todo. on click box should be in which just 3 fields:
+title,
+url,
+boolean - to allow user to select public or private. and one single craete button.
+don't need so much design just normal tailwind.
+
+---
+
+in the signup page of this i want tp connenct it with my personal supabase service. and want that on sign up it should create that user. want to use default signup provided by supabse.
+
+can you tell me first shoudl i crate server client and browser client both?? 
+also how should i impement juts craete a files in lib of craete client and don't change anything in any auth pages for now.
+
+---
+
+how can i  use this createBrowserClient and createServerClient for  sihgnup page? so whenevery use will signup it will craete the user's entry in my supabase user table?
+also every user must have handler which is unique. 
+like assume some name that must have to unique. that we have to take from user while signup.
+
+---
+
+broo in actions.ts you have added check from some defaults also which is provided by supabse.
+like in supabase it will giva an  some error msg by default so no need to explicity give it.
+we will just show error on signup form if the error happens.
+
+---
+
+will it show errors now only from generated from supabase defaults like email must be atleast 6 char and all?
+
+---
+
+i have already set and RLS policies for this all in supabase. 
+and created table also. so you don't have to worry about require and unique from the server side.
+
+---
+
+i think storing email in "user" table is unneccessary right??
+because in auth table we have already that and i can save uid in user table and handler.
+
+---
+
+you have use an deprecated file convention in middlewere. please ie proxy insted.
+
+---
+
+i think for small bookmark app craeting files like serevr.ts and session.ts is not good because it will create and unnecessory structure and complexity. 
+we can add restriction on dashboard, signup and login roughts on therir respective page only. so that we don't have to create many differnt file for small apps. 
+can you  suggest the approach??
+
+---
+
+after exploring the standard flows of supabse i have notice that-
+remain admin.ts, client.ts, server.ts and proxy.ts, 
+also the proxy.ts is same as middlewere.ts?? will it run automatically??
+
+---
+
+in  proxy file you have added session, but you have not created session file need for token refresh
+
+---
+
+there was an error regarding sign up that has been solved and it is working successfully, 
+i also want you to add configuration for login, so login worksperfectly. 
+i think we just need to check in supabse if user exist or not right?
+
+---
+
+Nice, now the signup and signin is working perfect but the dashboard is accessible without login or signup.
+because on Dashboard we have not put any restructions.
+
+---
+
+it's good as per required folder structure as i given to you.
+now i want that if user craete an bookmark and a data it should be save in my supabse table.
+
+---
+
+you have added a check on action.ts we have alresy put checkk on dashoard to redirect to the login.
+
+---
+
+on dashboard i want to show all the craeted Bookmark of that user.
+user shoudl able to see his all the Bookmark.
+
+---
+
+i have done resend setup. 
+develop the functionality to send a success mail to user whem do signup.i ahve already added resend/ts file for your help.
+
+---
+
+is it god to show sucess msg in differerent file or should i add it along with sign up logic??
+
+---
+
+broo the issue is in user table handler is unique, so it is giving an error like duplicate key value violates unique constraint "user_handle_key", but user is created in auth table of supabse. i think we need to add check for this before taking any handler. right??
+
+---
+
+broo the error is not showing still same issue, the user is added in auth table and not restricting from using same handler, 
+the logs are not even printing and email functionality is also not working, 
+for email. it is going in method also and according logs in that file it is following track also, still not working.
+
+---
+
+all things are working perfect, 
+i want now that...
+if any user visits any other users's profile which have unique handler the visiting user should be able to see that user's dashnoard only with public bookmark, without any login/signup. also that user cannot add anything in that
+ a user's bookmarks belong to that user. One user must never be able to read, edit, or delete another user's data.
+i thinkwe have to create one [handler] right?
+
+---
+
+can you add not found logic in same file insted of adding in different??
+
+---
+
+this functionlaity is working perfectly. now i want that user can delete and edit it's own bookmarks.
