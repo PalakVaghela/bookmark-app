@@ -1,0 +1,28 @@
+there is some issue. here...
+not everytime but sometimes. Bookmark is craeted still the form to create remain open and showing loading state. 
+the state is not maintaing between them.
+
+---
+
+shoudl i use this approach in which you have stored keyform. or we can do it using time stemp also. 
+provide date.now() in dependency of craete, update and in that all. so everytime dependecy will change it will rerender.
+can you suggest me optimal approach?
+
+---
+
+okay, then why you are adding formkey, 
+formkey will be unnessecory right?? because now everytime user claose and open the form it juts unmouncts and agin mounts.
+
+---
+
+accoring to previous logic ...
+Date.now() in the dependency array on the client is not a good idea — you’d be generating a new value every render, which can cause loops or unpredictable behavior
+then wy you keep adding it?
+
+---
+
+don't cnage any other style and all. Just make the border and backgroundof each the card litiile darker so that can be easily differntiate. also border only of dahboard and  header make same darker as card's boarde, don't change in that both's backgroung..
+
+---
+
+also make card components color some different then background. a slight but noticable change in color and make sure it also works on hover effect.

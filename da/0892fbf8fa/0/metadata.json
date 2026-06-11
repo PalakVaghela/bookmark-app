@@ -1,0 +1,114 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "da0892fbf8fa",
+  "session_id": "f87f418c-7a6c-4cd7-8a29-84a3d9c61ca8",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-11T18:26:58.539310024Z",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "files_touched": [
+    "app/(auth)/signup/page.tsx",
+    "app/[handle]/page.tsx",
+    "app/dashboard/actions.ts",
+    "app/dashboard/dashboard-client.tsx",
+    "app/page.tsx",
+    "components/dashboard/bookmark-card.tsx",
+    "components/dashboard/dashboard-header.tsx",
+    "lib/supabase/admin.ts"
+  ],
+  "agent": "Cursor",
+  "model": "default",
+  "turn_id": "1a779eb3bcda",
+  "session_metrics": {
+    "turn_count": 6
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-06-11T18:26:58.536441837Z",
+    "agent_lines": 0,
+    "agent_removed": 31,
+    "human_added": 0,
+    "human_modified": 35,
+    "human_removed": 65,
+    "total_committed": 25,
+    "total_lines_changed": 132,
+    "agent_percentage": 23.484848484848484,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 440,
+      "user_lines_removed": 54,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "app/(auth)/signup/page.tsx": 9,
+        "app/[handle]/page.tsx": 71,
+        "app/page.tsx": 1,
+        "components/dashboard/bookmark-card.tsx": 10,
+        "lib/supabase/admin.ts": 1
+      },
+      "user_removed_per_file": {
+        "app/(auth)/signup/page.tsx": 12,
+        "app/[handle]/page.tsx": 23,
+        "app/page.tsx": 1,
+        "components/dashboard/bookmark-card.tsx": 4,
+        "lib/supabase/admin.ts": 14
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 478,
+      "agent_lines_removed": 92
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 478,
+      "agent_lines_removed": 92
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 475,
+      "agent_lines_removed": 92
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 24,
+      "user_lines_removed": 37,
+      "agent_lines_added": 475,
+      "agent_lines_removed": 92,
+      "user_added_per_file": {
+        "app/(auth)/signup/page.tsx": 1,
+        "app/[handle]/page.tsx": 3,
+        "components/dashboard/bookmark-card.tsx": 20
+      },
+      "user_removed_per_file": {
+        "app/(auth)/signup/page.tsx": 1,
+        "app/[handle]/page.tsx": 12,
+        "components/dashboard/bookmark-card.tsx": 24
+      }
+    },
+    {
+      "checkpoint_number": 6,
+      "user_lines_added": 3,
+      "user_lines_removed": 2,
+      "agent_lines_added": 488,
+      "agent_lines_removed": 121,
+      "user_added_per_file": {
+        "app/page.tsx": 3
+      },
+      "user_removed_per_file": {
+        "app/page.tsx": 2
+      }
+    }
+  ]
+}
