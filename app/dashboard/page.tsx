@@ -13,11 +13,19 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
+  const { data: profile } = await supabase
+    .from("user")
+    .select("handle")
+    .eq("id", user.id)
+    .single();
+
   const { data: bookmarks } = await supabase
     .from("bookmarks")
     .select("id, title, url, is_public, created_at")
     .eq("user_id", user.id)
     .order("created_at", { ascending: false });
 
-  return <DashboardClient bookmarks={bookmarks ?? []} />;
+  return (
+    <DashboardClient handle={profile!.handle} bookmarks={bookmarks ?? []} />
+  );
 }

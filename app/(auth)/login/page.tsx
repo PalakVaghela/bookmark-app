@@ -1,25 +1,34 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { signIn, type AuthState } from "@/app/(auth)/actions";
 import Link from "next/link";
 import { Lock, Mail, Loader2, ArrowRight } from "lucide-react";
+import Toast, { type ToastData } from "@/components/providers/toast";
 
 const initialState: AuthState = {};
 
 export default function Login() {
   const [state, formAction, isPending] = useActionState(signIn, initialState);
+  const [toast, setToast] = useState<ToastData | null>(null);
+
+  useEffect(() => {
+    if (isPending) {
+      setToast({ type: "loading", message: "Signing in..." });
+    }
+  }, [isPending]);
+
+  useEffect(() => {
+    if (state.error) {
+      setToast({ type: "error", message: state.error });
+    }
+  }, [state.error]);
 
   return (
     <div className="relative flex min-h-[90vh] flex-1 items-center justify-center p-6 bg-[#0B0F19] overflow-hidden">
-
-      {/* Background Glow - Identical to Signup for complete consistency */}
-      <div className="absolute top-1/2 left-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-600/10 blur-[140px]" />
-
-      {/* Spacious, premium container matching the signup template perfectly */}
+      <div className="absolute top-1/2 left-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-600/10 blur-[140px]" />  {/* Spacious, premium container matching the signup template perfectly */}
       <div className="w-full max-w-md rounded-2xl border border-gray-800/90 bg-gray-900/40 p-10 backdrop-blur-xl shadow-2xl">
-
-        {/* Header Block */}
+        
         <div className="mb-8 text-center sm:text-left">
           <h1 className="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent">
             Welcome back
@@ -30,53 +39,50 @@ export default function Login() {
         </div>
 
         <form action={formAction} className="flex flex-col gap-6">
-
-          {/* Email Field */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-semibold uppercase tracking-wider text-gray-200">
               Email Address
             </label>
+
             <div className="relative flex items-center">
               <Mail className="absolute left-4 h-5 w-5 text-gray-400" />
               <input
                 name="email"
                 type="email"
                 required
+                disabled={isPending}
                 placeholder="you@example.com"
                 className="w-full rounded-xl border border-gray-800 bg-gray-950/60 py-3 pl-12 pr-4 text-base text-white placeholder-gray-500 transition-colors focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
               />
             </div>
           </div>
 
-          {/* Password Field */}
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
               <label className="text-sm font-semibold uppercase tracking-wider text-gray-200">
                 Password
               </label>
-              {/* Optional: Placeholder for forgot password link if you decide to build it later */}
-              {/* <Link href="/forgot" className="text-xs font-medium text-indigo-400 hover:underline">Forgot?</Link> */}
             </div>
+
             <div className="relative flex items-center">
               <Lock className="absolute left-4 h-5 w-5 text-gray-400" />
               <input
                 name="password"
                 type="password"
                 required
+                disabled={isPending}
                 placeholder="••••••••"
                 className="w-full rounded-xl border border-gray-800 bg-gray-950/60 py-3 pl-12 pr-4 text-base text-white placeholder-gray-500 transition-colors focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
               />
             </div>
           </div>
 
-          {/* Error Message Block */}
           {state.error && (
             <div className="rounded-xl border border-rose-500/30 bg-rose-500/10 p-3.5 text-center text-sm text-rose-400 font-medium">
               {state.error}
             </div>
           )}
 
-          {/* Submit Action Button */}
           <button
             type="submit"
             disabled={isPending}
@@ -96,14 +102,16 @@ export default function Login() {
           </button>
         </form>
 
-        {/* Footer Navigation link */}
         <div className="mt-8 text-center text-sm text-gray-400">
           New to Bookmark App?{" "}
           <Link href="/signup" className="font-semibold text-indigo-400 hover:text-indigo-300 hover:underline transition-colors">
             Create an account
           </Link>
         </div>
+
       </div>
+
+      {toast ? <Toast {...toast} onClose={() => setToast(null)} /> : null}
     </div>
   );
 }

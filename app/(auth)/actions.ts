@@ -101,3 +101,9 @@ export async function signIn(
 
   redirect("/dashboard");
 }
+
+export async function signOut() {
+  const supabase = await createClient();
+  await supabase.auth.signOut();
+  redirect("/login");
+}

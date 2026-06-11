@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "bookmark-app",
+  title: "Bookmarks",
   description: "Save, organize, and share your favorite links in one place.",
 };
 
