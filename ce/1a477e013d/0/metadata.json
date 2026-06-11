@@ -1,0 +1,296 @@
+{
+  "cli_version": "0.7.5",
+  "checkpoint_id": "ce1a477e013d",
+  "session_id": "04d68afa-c5c3-4b85-8ee5-49019449cc8b",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-11T05:19:45.492174009Z",
+  "branch": "main",
+  "checkpoints_count": 14,
+  "files_touched": [
+    "app/(auth)/actions.ts",
+    "app/(auth)/login/page.tsx",
+    "app/(auth)/signup/page.tsx",
+    "app/dashboard/dashboard-client.tsx",
+    "app/dashboard/page.tsx",
+    "app/layout.tsx",
+    "components/dashboard/bookmark-card.tsx",
+    "components/dashboard/bookmark-list.tsx",
+    "components/dashboard/dashboard-header.tsx",
+    "components/dashboard/filter-panel.tsx"
+  ],
+  "agent": "Cursor",
+  "model": "default",
+  "turn_id": "e7fa4acd2f64",
+  "session_metrics": {
+    "turn_count": 49,
+    "context_tokens": 185202,
+    "context_window_size": 200000
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-06-11T05:19:45.474393148Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 762,
+    "human_modified": 1208,
+    "human_removed": 0,
+    "total_committed": 762,
+    "total_lines_changed": 1970,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 348,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 348,
+      "user_lines_removed": 0,
+      "agent_lines_added": 282,
+      "agent_lines_removed": 179,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 377,
+      "user_lines_removed": 32,
+      "agent_lines_added": 282,
+      "agent_lines_removed": 179,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "components/dashboard/bookmark-card.tsx": 22,
+        "components/dashboard/bookmark-list.tsx": 7
+      },
+      "user_removed_per_file": {
+        "components/dashboard/bookmark-card.tsx": 21,
+        "components/dashboard/bookmark-list.tsx": 11
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 377,
+      "user_lines_removed": 32,
+      "agent_lines_added": 282,
+      "agent_lines_removed": 179,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "components/dashboard/bookmark-card.tsx": 22,
+        "components/dashboard/bookmark-list.tsx": 7
+      },
+      "user_removed_per_file": {
+        "components/dashboard/bookmark-card.tsx": 21,
+        "components/dashboard/bookmark-list.tsx": 11
+      }
+    },
+    {
+      "checkpoint_number": 6,
+      "user_lines_added": 428,
+      "user_lines_removed": 44,
+      "agent_lines_added": 282,
+      "agent_lines_removed": 181,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "components/dashboard/bookmark-card.tsx": 73,
+        "components/dashboard/bookmark-list.tsx": 7
+      },
+      "user_removed_per_file": {
+        "components/dashboard/bookmark-card.tsx": 33,
+        "components/dashboard/bookmark-list.tsx": 11
+      }
+    },
+    {
+      "checkpoint_number": 7,
+      "user_lines_added": 426,
+      "user_lines_removed": 48,
+      "agent_lines_added": 282,
+      "agent_lines_removed": 181,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "components/dashboard/bookmark-card.tsx": 73,
+        "components/dashboard/bookmark-list.tsx": 5
+      },
+      "user_removed_per_file": {
+        "components/dashboard/bookmark-card.tsx": 33,
+        "components/dashboard/bookmark-list.tsx": 15
+      }
+    },
+    {
+      "checkpoint_number": 8,
+      "user_lines_added": 426,
+      "user_lines_removed": 48,
+      "agent_lines_added": 282,
+      "agent_lines_removed": 181,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "components/dashboard/bookmark-card.tsx": 73,
+        "components/dashboard/bookmark-list.tsx": 5
+      },
+      "user_removed_per_file": {
+        "components/dashboard/bookmark-card.tsx": 33,
+        "components/dashboard/bookmark-list.tsx": 15
+      }
+    },
+    {
+      "checkpoint_number": 9,
+      "user_lines_added": 577,
+      "user_lines_removed": 178,
+      "agent_lines_added": 354,
+      "agent_lines_removed": 186,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "app/dashboard/dashboard-client.tsx": 151,
+        "components/dashboard/bookmark-card.tsx": 73,
+        "components/dashboard/bookmark-list.tsx": 5
+      },
+      "user_removed_per_file": {
+        "app/dashboard/dashboard-client.tsx": 130,
+        "components/dashboard/bookmark-card.tsx": 33,
+        "components/dashboard/bookmark-list.tsx": 15
+      }
+    },
+    {
+      "checkpoint_number": 10,
+      "user_lines_added": 535,
+      "user_lines_removed": 108,
+      "agent_lines_added": 472,
+      "agent_lines_removed": 284,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "components/dashboard/bookmark-card.tsx": 156,
+        "components/dashboard/bookmark-list.tsx": 5,
+        "components/dashboard/filter-panel.tsx": 26
+      },
+      "user_removed_per_file": {
+        "components/dashboard/bookmark-card.tsx": 78,
+        "components/dashboard/bookmark-list.tsx": 15,
+        "components/dashboard/filter-panel.tsx": 15
+      }
+    },
+    {
+      "checkpoint_number": 11,
+      "user_lines_added": 580,
+      "user_lines_removed": 122,
+      "agent_lines_added": 469,
+      "agent_lines_removed": 283,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "app/dashboard/dashboard-client.tsx": 6,
+        "app/layout.tsx": 1,
+        "components/dashboard/bookmark-card.tsx": 156,
+        "components/dashboard/bookmark-list.tsx": 6,
+        "components/dashboard/dashboard-header.tsx": 37,
+        "components/dashboard/filter-panel.tsx": 26
+      },
+      "user_removed_per_file": {
+        "app/dashboard/dashboard-client.tsx": 3,
+        "app/layout.tsx": 1,
+        "components/dashboard/bookmark-card.tsx": 78,
+        "components/dashboard/bookmark-list.tsx": 16,
+        "components/dashboard/dashboard-header.tsx": 9,
+        "components/dashboard/filter-panel.tsx": 15
+      }
+    },
+    {
+      "checkpoint_number": 12,
+      "user_lines_added": 619,
+      "user_lines_removed": 241,
+      "agent_lines_added": 537,
+      "agent_lines_removed": 271,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "app/dashboard/dashboard-client.tsx": 45,
+        "app/layout.tsx": 1,
+        "components/dashboard/bookmark-card.tsx": 156,
+        "components/dashboard/bookmark-list.tsx": 6,
+        "components/dashboard/dashboard-header.tsx": 37,
+        "components/dashboard/filter-panel.tsx": 26
+      },
+      "user_removed_per_file": {
+        "app/dashboard/dashboard-client.tsx": 119,
+        "app/layout.tsx": 4,
+        "components/dashboard/bookmark-card.tsx": 78,
+        "components/dashboard/bookmark-list.tsx": 16,
+        "components/dashboard/dashboard-header.tsx": 9,
+        "components/dashboard/filter-panel.tsx": 15
+      }
+    },
+    {
+      "checkpoint_number": 13,
+      "user_lines_added": 573,
+      "user_lines_removed": 118,
+      "agent_lines_added": 473,
+      "agent_lines_removed": 284,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "components/dashboard/bookmark-card.tsx": 156,
+        "components/dashboard/bookmark-list.tsx": 6,
+        "components/dashboard/dashboard-header.tsx": 37,
+        "components/dashboard/filter-panel.tsx": 26
+      },
+      "user_removed_per_file": {
+        "components/dashboard/bookmark-card.tsx": 78,
+        "components/dashboard/bookmark-list.tsx": 16,
+        "components/dashboard/dashboard-header.tsx": 9,
+        "components/dashboard/filter-panel.tsx": 15
+      }
+    },
+    {
+      "checkpoint_number": 14,
+      "user_lines_added": 644,
+      "user_lines_removed": 119,
+      "agent_lines_added": 511,
+      "agent_lines_removed": 276,
+      "user_added_per_file": {
+        ".cursor/hooks.json": 40,
+        ".opencode/plugins/entire.ts": 216,
+        ".pi/extensions/entire/index.ts": 92,
+        "app/dashboard/dashboard-client.tsx": 1,
+        "components/dashboard/bookmark-card.tsx": 167,
+        "components/dashboard/bookmark-list.tsx": 6,
+        "components/dashboard/dashboard-header.tsx": 37,
+        "components/dashboard/filter-panel.tsx": 26,
+        "components/providers/toast.tsx": 59
+      },
+      "user_removed_per_file": {
+        "app/dashboard/dashboard-client.tsx": 1,
+        "components/dashboard/bookmark-card.tsx": 78,
+        "components/dashboard/bookmark-list.tsx": 16,
+        "components/dashboard/dashboard-header.tsx": 9,
+        "components/dashboard/filter-panel.tsx": 15
+      }
+    }
+  ]
+}
